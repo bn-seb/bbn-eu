@@ -5,8 +5,13 @@
     <meta charSet="utf-8" />
     <style>
         body {
-            background: #00091B;
             color: #fff;
+            background: #00091B url(bg.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            margin: 0;
         }
 
         @keyframes fadeIn {
@@ -36,32 +41,60 @@
 
         .wrapper {
             position: absolute;
-            left: 50%;
+
             top: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
+            transform: translate(0, -50%);
+            -webkit-transform: translate(0, -50%);
+
             animation: fadeIn 1000ms ease;
             -webkit-animation: fadeIn 1000ms ease;
 
+            background-color: rgb(0 0 0 / 0.2);
+
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+        }
+
+        .message {
+            margin: 0 auto;
+            max-width: 50%;
         }
 
         h1 {
-            font-size: 50px;
+            font-size: 3.25rem;
+            line-height: 3.5rem;
+
             font-family: 'Poppins', sans-serif;
             margin-bottom: 0;
             line-height: 1;
             font-weight: 700;
         }
 
+        p {
+            font-size: 1.525rem;
+            line-height: 1.85rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
         .dot {
-            color: #4FEBFE;
+            color: #4ffe92;
         }
     </style>
 </head>
 
 <body>
     <div class="wrapper">
-        <h1>coming soon<span class="dot">.</span></h1>
+        <div class="message">
+            <h1>Bemboo Nation<span class="dot">.</span></h1>
+            <p>Bamboo is a symbol of longevity because of its durability, strength, flexibility, and resilience.</p>
+            <p>It survives in the harshest conditions, still standing tall and staying green year-round. When the storm
+                comes, bamboo bends with the wind.</p>
+            <p>When the storm ceases, it resumes its upright position.</p>
+        </div>
     </div>
 </body>
 
